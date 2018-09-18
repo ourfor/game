@@ -1,4 +1,4 @@
 # Game_java
-<p align=center><img src="https://i.imgur.com/cTIUgVv.gif"></p>
+<p align=center><img src=""></p>
 
 骑士飞行棋
