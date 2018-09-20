@@ -6,6 +6,8 @@ public class Game {
     static int role2=0;
     static int random1=0;
     static int random2=0;
+    static int locationA=0;
+    static int locationB=0;
     static String name_role1="";
     static String name_role2="";
     static String ori_map = "@@－－－－★¤－－■－－－★－－－★－－〓－－¤－〓－■－－－－－★－－－－★－¤－－－－〓－－－－★－－－－¤－－－－■－－〓★－－－－－－－－－★■－－〓－〓－－－－¤－－★－－－－－－－〓－－¤";
@@ -20,8 +22,12 @@ public class Game {
         //打印地图
         Print ori = new Print();
         ori.HelpinMap();
-        ori.PrintMap(ori_map,role1,role2);
-        ori.Move();
+        for(;locationA!=ori_map.length()&&locationB!=ori_map.length();){
+            ori.PrintMap(ori_map);
+            ori.A_Move();
+            ori.PrintMap(ori_map);
+            ori.B_Move();
+        }
     }
 
     static void SwitchRole(){
@@ -88,7 +94,42 @@ public class Game {
 }
 
 class Print{
-    void PrintMap(String ori_map_,int role1_,int role2_) {
+
+    String UpdateMap(String ori_map_){
+        String now_map="";
+        if(Game.locationA>Game.locationB){
+            for(int i=0;i<Game.locationB;i++){
+                now_map+=ori_map_.charAt(i);
+            }
+            now_map+='B';
+            for(int i=Game.locationB+1;i<Game.locationA;i++){
+                now_map+=ori_map_.charAt(i);
+            }
+            now_map+='A';
+            for(int i=Game.locationA+1;i<ori_map_.length();i++){
+                now_map+=ori_map_.charAt(i);
+            }
+            return now_map;
+        }
+        else{
+            for(int i=0;i<Game.locationA;i++){
+                now_map+=ori_map_.charAt(i);
+            }
+            now_map+='B';
+            for(int i=Game.locationA+1;i<Game.locationB;i++){
+                now_map+=ori_map_.charAt(i);
+            }
+            now_map+='A';
+            for(int i=Game.locationB+1;i<ori_map_.length();i++) {
+                now_map += ori_map_.charAt(i);
+            }
+            return now_map;
+        }
+    }
+
+    void PrintMap(String ori_map_){
+
+        ori_map_=UpdateMap(ori_map_);
         for (int i = 0; i < 32; i++) {
             System.out.print("" + ori_map_.charAt(i));
         }
@@ -112,11 +153,24 @@ class Print{
                 "\n" +
                 "地图如下：");
     }
-    void Move(){
+    void A_Move(){
+        //一号玩家移动
         System.out.println(Game.name_role1+", 请您按任意字母键后回车启动掷骰子：");
         Scanner reader=new Scanner(System.in);
-            Game.random1=(int)Math.random()*100%5+1;
+            if(reader.hasNext()) Game.random1=(int)(Math.random()*100)%5+1;
+            Game.locationA+=Game.random1;
+            System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n",Game.random1,Game.locationA,Game.locationB);
     }
+
+    void B_Move(){
+        //二号玩家移动
+        System.out.println(Game.name_role2+", 请您按任意字母键后回车启动掷骰子：");
+        Scanner reader_2=new Scanner(System.in);
+        if(reader_2.hasNext()) Game.random2=(int)(Math.random()*100)%5+1;
+        Game.locationB+=Game.random2;
+        System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n",Game.random2,Game.locationB,Game.locationA);
+    }
+
 }
 
 
