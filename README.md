@@ -1,7 +1,7 @@
 <h1 align=center> Game Java
 
 
-<p align=center><img src="https://i.imgur.com/yGBukGp.gif"></p>
+<p align=center><img src="https://i.imgur.com/yGBukGp.gif" width=200% height=200%></p>
 
 为电竞而生(- .-)
 
