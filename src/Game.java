@@ -171,6 +171,53 @@ class Print{
         System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n",Game.random2,Game.locationB,Game.locationA);
     }
 
+    void SpecialLocation(int Location_){
+        switch(Location_){
+            case 11:
+            case 29:
+            case 62:
+            case 82: System.out.println(""+"暂停");
+            case 22:
+            case 27:
+            case 47:
+            case 65:
+            case 80:
+            case 82:
+            case 98: System.out.println("时空隧道");
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+            case:
+        }
+    }
+
 }
 
 
