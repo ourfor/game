@@ -8,6 +8,8 @@ public class Game {
     static int random2=0;
     static int locationA=0;
     static int locationB=0;
+    static boolean Stop_moveA=false;
+    static boolean Stop_moveB=false;
     static String name_role1="";
     static String name_role2="";
     static String ori_map = "@@－－－－★¤－－■－－－★－－－★－－〓－－¤－〓－■－－－－－★－－－－★－¤－－－－〓－－－－★－－－－¤－－－－■－－〓★－－－－－－－－－★■－－〓－〓－－－－¤－－★－－－－－－－〓－－¤";
@@ -28,6 +30,9 @@ public class Game {
             ori.PrintMap(ori_map);
             ori.B_Move();
         }
+        ori.GameOver();
+        if(locationA==ori_map.length()) ori.WinInfor(name_role1);
+        else ori.WinInfor(name_role2);
     }
 
     static void SwitchRole(){
@@ -97,34 +102,56 @@ class Print{
 
     String UpdateMap(String ori_map_){
         String now_map="";
-        if(Game.locationA>Game.locationB){
-            for(int i=0;i<Game.locationB;i++){
+        if(Game.locationA==0&&Game.locationB==0) return ori_map_;
+
+        if(Game.locationA>Game.locationB&&Game.locationB!=0){
+            for(int i=0;i<Game.locationB-1;i++){
                 now_map+=ori_map_.charAt(i);
             }
             now_map+='B';
-            for(int i=Game.locationB+1;i<Game.locationA;i++){
+            for(int i=Game.locationB;i<Game.locationA-1;i++){
                 now_map+=ori_map_.charAt(i);
             }
             now_map+='A';
-            for(int i=Game.locationA+1;i<ori_map_.length();i++){
+            for(int i=Game.locationA;i<ori_map_.length();i++){
                 now_map+=ori_map_.charAt(i);
             }
             return now_map;
         }
-        else{
-            for(int i=0;i<Game.locationA;i++){
+        else if(Game.locationA<Game.locationB&&Game.locationA!=0){
+            for(int i=0;i<Game.locationA-1;i++){
                 now_map+=ori_map_.charAt(i);
             }
             now_map+='B';
-            for(int i=Game.locationA+1;i<Game.locationB;i++){
+            for(int i=Game.locationA;i<Game.locationB-1;i++){
                 now_map+=ori_map_.charAt(i);
             }
             now_map+='A';
-            for(int i=Game.locationB+1;i<ori_map_.length();i++) {
+            for(int i=Game.locationB;i<ori_map_.length();i++) {
                 now_map += ori_map_.charAt(i);
             }
             return now_map;
         }
+        if(Game.locationA==0){
+            now_map+='A';
+            for(int i=1;i<ori_map_.length();i++) now_map+=ori_map_.charAt(i);
+        }
+
+        if(Game.locationB==0){
+            now_map+='B';
+            for(int i=1;i<ori_map_.length();i++) now_map+=ori_map_.charAt(i);
+        }
+        else if(Game.locationA==Game.locationB){
+            for(int i=0;i<Game.locationB-1;i++){
+                now_map+=ori_map_.charAt(i);
+            }
+            now_map+='B';
+            for(int i=Game.locationB;i<ori_map_.length();i++){
+                now_map+=ori_map_.charAt(i);
+            }
+            return now_map;
+        }
+        return ori_map_;
     }
 
     void PrintMap(String ori_map_){
@@ -155,67 +182,119 @@ class Print{
     }
     void A_Move(){
         //一号玩家移动
-        System.out.println(Game.name_role1+", 请您按任意字母键后回车启动掷骰子：");
-        Scanner reader=new Scanner(System.in);
-            if(reader.hasNext()) Game.random1=(int)(Math.random()*100)%5+1;
-            Game.locationA+=Game.random1;
-            System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n",Game.random1,Game.locationA,Game.locationB);
+        if(!Game.Stop_moveA) {
+            System.out.println(Game.name_role1 + ", 请您按任意字母键后回车启动掷骰子：");
+            Scanner reader = new Scanner(System.in);
+            if (reader.hasNext()) Game.random1 = (int) (Math.random() * 100) % 5 + 1;
+            Game.locationA += Game.random1;
+
+            int move = SpecialLocation(Game.locationA, Game.name_role1);
+            if(move == 200) Game.Stop_moveA = true;
+            else if(move != 188) Game.locationA = move;
+
+            System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n", Game.random1, Game.locationA, Game.locationB);
+        }
+        else System.out.println("\n"+"\n"+Game.name_role1+"停掷一次！\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n");
     }
+
 
     void B_Move(){
         //二号玩家移动
-        System.out.println(Game.name_role2+", 请您按任意字母键后回车启动掷骰子：");
-        Scanner reader_2=new Scanner(System.in);
-        if(reader_2.hasNext()) Game.random2=(int)(Math.random()*100)%5+1;
-        Game.locationB+=Game.random2;
-        System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n",Game.random2,Game.locationB,Game.locationA);
+        if(!Game.Stop_moveB) {
+            System.out.println(Game.name_role2 + ", 请您按任意字母键后回车启动掷骰子：");
+            Scanner reader_2 = new Scanner(System.in);
+            if (reader_2.hasNext()) Game.random2 = (int) (Math.random() * 100) % 5 + 1;
+            Game.locationB += Game.random2;
+
+            int move = SpecialLocation(Game.locationB, Game.name_role2);
+            if(move==200) Game.Stop_moveB=true;
+            else if(move != 188) Game.locationB = move;
+
+            System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n", Game.random2, Game.locationB, Game.locationA);
+        }
+        else System.out.println("\n"+"\n"+Game.name_role2+"停掷一次！\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n");
     }
 
-    void SpecialLocation(int Location_){
+    //返回值说明：200表示暂停，188表示遇到时光轮盘
+    int SpecialLocation(int Location_,String role_name_){
         switch(Location_){
             case 11:
             case 29:
             case 62:
-            case 82: System.out.println(""+"暂停");
+            case 77: {StopMove(role_name_);return 200;}
+            //break;
             case 22:
             case 27:
             case 47:
             case 65:
             case 80:
             case 82:
-            case 98: System.out.println("时空隧道");
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
-            case:
+            case 98: {return TimeTube(Location_);}
+            //break;
+            case 7:
+            case 15:
+            case 35:
+            case 40:
+            case 52:
+            case 66:
+            case 76:
+            case 90: return Boom(Location_);
+            //break;
+            case 8:
+            case 25:
+            case 42:
+            case 57:
+            case 87:
+            case 101: {Lucky(Location_);return 188;}
+            //break;
         }
+        return Location_;
+    }
+
+    void Lucky(int Location_){
+        System.out.println("◆◇◆◇◆欢迎进入幸运轮盘◆◇◆◇◆\n" +
+                "   请选择一种运气：\n" +
+                "   1. 交换位置  2. 轰炸\n" +
+                "=============================");
+        Scanner input=new Scanner(System.in);
+        if(input.nextInt()==1) {
+            int temp;
+            temp=Game.locationB;
+            Game.locationB=Game.locationA;
+            Game.locationA=temp;
+        }
+        else {
+            if(Location_==Game.locationA&&Game.locationB>6) Game.locationB-=6;
+            else Game.locationB=0;
+
+            if(Location_==Game.locationB&&Game.locationA>6) Game.locationA-=6;
+            else Game.locationA=0;
+        }
+
+    }
+
+    void StopMove(String role_name_){
+        System.out.println("~~>_<~~  要停战一局了。");
+    }
+
+    int Boom(int location_){
+        System.out.println("~:-(  踩到地雷，气死了...");
+        return location_-=6;
+    }
+
+    int TimeTube(int location_){
+        System.out.println("|-P  进入时空隧道， 真爽！");
+        return location_+=10;
+    }
+
+    void GameOver(){
+        System.out.println("****************************************************\n" +
+                "                      Game  Over\n" +
+                "****************************************************");
+    }
+
+    void WinInfor(String Winner_){
+        System.out.println("恭喜"+Winner_+"将军! 您获胜了！");
     }
 
 }
