@@ -191,10 +191,14 @@ class Print{
             int move = SpecialLocation(Game.locationA, Game.name_role1);
             if(move == 200) Game.Stop_moveA = true;
             else if(move != 188) Game.locationA = move;
+            if(Game.locationA==Game.locationB) Game.locationB=0;
 
             System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n", Game.random1, Game.locationA, Game.locationB);
         }
-        else System.out.println("\n"+"\n"+Game.name_role1+"停掷一次！\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n");
+        else {
+            System.out.println("\n"+"\n"+Game.name_role1+"停掷一次！\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n");
+            Game.Stop_moveA=false;
+        }
     }
 
 
@@ -209,10 +213,14 @@ class Print{
             int move = SpecialLocation(Game.locationB, Game.name_role2);
             if(move==200) Game.Stop_moveB=true;
             else if(move != 188) Game.locationB = move;
+            if(Game.locationB==Game.locationA) Game.locationA=0;
 
             System.out.printf("-----------------\n骰子数： %d\n\n您当前位置：  %d\n对方当前位置：%d\n-----------------\n", Game.random2, Game.locationB, Game.locationA);
         }
-        else System.out.println("\n"+"\n"+Game.name_role2+"停掷一次！\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n");
+        else {
+            System.out.println("\n"+"\n"+Game.name_role2+"停掷一次！\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n");
+            Game.Stop_moveB=false;
+        }
     }
 
     //返回值说明：200表示暂停，188表示遇到时光轮盘
