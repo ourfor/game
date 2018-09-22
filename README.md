@@ -98,3 +98,10 @@ java学习小组的作业就是把这个课堂上老师发的骑士飞行棋的�
 87
 101
 ```
+
+# 收获
+- 大概知道了java里面的几种传值的方式
+- 改变了以前那种只用` vim+编译器 ` 的学习方法，认识到了一个好的IDE不仅可以挺高效率，还可以收获一些经验，当然作为初学者，秉持熟悉基本的类的原则，尽量少用IDE。
+- ` Source code pro `+` IDEA的Vim `+` Material Theme UI `的 ***code Scheme***显示效果不错，另外，Windows下面用记事本敲代码的真的是秀啊，感谢[JatBrain](https://www.jetbrains.com)为学生提高免费的UItimate IDEA
+
+<img src=https://i.imgur.com/PF2W6OX.jpg align=center>
