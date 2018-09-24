@@ -24,14 +24,14 @@ public class Game {
         //打印地图
         Print ori = new Print();
         ori.HelpinMap();
-        for(;locationA!=ori_map.length()&&locationB!=ori_map.length();){
+        for(;locationA+1<ori_map.length()&&locationB+1<ori_map.length();){
             ori.PrintMap(ori_map);
             ori.A_Move();
             ori.PrintMap(ori_map);
             ori.B_Move();
         }
         ori.GameOver();
-        if(locationA==ori_map.length()) ori.WinInfor(name_role1);
+        if(locationA>locationB) ori.WinInfor(name_role1);
         else ori.WinInfor(name_role2);
     }
 
@@ -77,9 +77,21 @@ public class Game {
         System.out.println("请选择角色:1.戴高乐 2.艾森豪威尔 3.麦克阿瑟 4.巴顿");
         Scanner input = new Scanner(System.in);
         System.out.print("请玩家1选择角色：");
+
+        while(!input.hasNextInt()) {
+            System.out.println("请按要求输入合法的数字:");
+            input.next();
+        }
+
         role1_ = input.nextInt();
         role1=role1_;
         System.out.print("请玩家2选择角色：");
+
+        while(!input.hasNextInt()) {
+            System.out.println("请按要求输入合法的数字:");
+            input.next();
+        }
+
         role2_ = input.nextInt();
         for (; role1_ == role2_; ) {
             System.out.print("不能选择" + role1_ + "号角色，因为玩家一已经选择该角色,请从新选择角色:");
@@ -96,6 +108,23 @@ public class Game {
 
     }
 
+    static int ArgsIslegal(boolean t_f,int num_){
+        Scanner ReInput = new Scanner(System.in);
+        while(!t_f) {
+            System.out.println("请按要求输入合法的数字:");
+            ReInput.next();
+            t_f=ReInput.hasNextInt();
+            if(t_f){
+                if(num_==2){
+                    if(ReInput.nextInt()<0||ReInput.nextInt()>3) t_f=false;
+                }
+                else{
+                    if(ReInput.nextInt()<0||ReInput.nextInt()>5) t_f=false;
+                }
+            }
+        }
+        return ReInput.nextInt();
+    }
 }
 
 class Print{
@@ -122,11 +151,11 @@ class Print{
             for(int i=0;i<Game.locationA-1;i++){
                 now_map+=ori_map_.charAt(i);
             }
-            now_map+='B';
+            now_map+='A';
             for(int i=Game.locationA;i<Game.locationB-1;i++){
                 now_map+=ori_map_.charAt(i);
             }
-            now_map+='A';
+            now_map+='B';
             for(int i=Game.locationB;i<ori_map_.length();i++) {
                 now_map += ori_map_.charAt(i);
             }
@@ -141,6 +170,7 @@ class Print{
             now_map+='B';
             for(int i=1;i<ori_map_.length();i++) now_map+=ori_map_.charAt(i);
         }
+        /*
         else if(Game.locationA==Game.locationB){
             for(int i=0;i<Game.locationB-1;i++){
                 now_map+=ori_map_.charAt(i);
@@ -151,6 +181,7 @@ class Print{
             }
             return now_map;
         }
+        */
         return ori_map_;
     }
 
@@ -265,6 +296,7 @@ class Print{
                 "   1. 交换位置  2. 轰炸\n" +
                 "=============================");
         Scanner input=new Scanner(System.in);
+
         if(input.nextInt()==1) {
             int temp;
             temp=Game.locationB;
