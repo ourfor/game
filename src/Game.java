@@ -1,3 +1,9 @@
+/*
+ *author:ourfor
+ *date: 20180919
+ *description: 骑士飞行棋
+ */
+
 import java.util.Scanner;
 
 public class Game {
