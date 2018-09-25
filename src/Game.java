@@ -88,6 +88,10 @@ public class Game {
             System.out.println("请按要求输入合法的数字:");
             input.next();
         }
+        while(input.nextInt()<0||input.nextInt()>5) {
+            System.out.println("请按要求输入合法的数字:");
+            input.next();
+        }
 
         role1_ = input.nextInt();
         role1=role1_;
