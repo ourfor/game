@@ -84,7 +84,7 @@ public class Game {
         Scanner input = new Scanner(System.in);
         System.out.print("请玩家1选择角色：");
 
-        while(!input.hasNextInt()||(role1_=input.nextInt()&&(role1_<0||role1_>5))) {
+        while(!input.hasNextInt()||((role1_=input.nextInt())<0||role1_>5)) {
             System.out.println("请按要求输入合法的数字:");
             input.next();
         }
@@ -95,7 +95,6 @@ public class Game {
         }
         */
 
-        role1_ = input.nextInt();
         role1=role1_;
         System.out.print("请玩家2选择角色：");
 
