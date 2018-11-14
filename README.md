@@ -21,6 +21,9 @@
   <a href="//ourfor.top"><img src="https://img.shields.io/badge/Blog-ourfor-orange.svg"></a>
 </p>
 
+> - [骑士飞行棋](https://github.com/ourfor/Game_java/tree/chess)
+> - [坦克大战](https://github.com/ourfor/Game_java/tree/tank)
+
 # 骑士飞行棋
 这个游戏，感觉没啥意思，我玩了几把，刚开始运行这个console端的小程序，感觉比较简陋，由于老师给出的是编译好的字节码，直接在 ***命令提示符窗口*** 或者 ***Terminal*** 中执行` java StartGame `,运行游戏主程序，首先进入角色选择的界面，两个玩家，每个玩家都可以选择4个角色，这四个角色除了名字不一样之外似乎没有太大的区别，整个地图共10行，包含特殊符号，其中第` 1 `行和第` 10 `行是顺序的，第` 6 `行是倒序的。
 
