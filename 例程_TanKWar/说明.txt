@@ -1,3 +1,0 @@
-本例程是一个完整的Eclipse项目，可以直接导入。
-标准测试环境是JDK1.5。
-主类在GameFrame.java
