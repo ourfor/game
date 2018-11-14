@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+	<className>designpatterns.factorymethod.DatabaseLoggerFactory</className>
+	
+	<player1>Ａ</player1>
+	<player2>Ｂ</player2>
+	<startPoint>○</startPoint>
+	<endPoint>▓</endPoint>
+	<luckyTurn>¤</luckyTurn>
+	<landMine>★</landMine>
+	<pause>■</pause>
+	<timeTunnel>〓</timeTunnel>
+	<common>－</common>
+	
+	<roleNames>关羽</roleNames>
+	<roleNames>张飞</roleNames>
+	<roleNames>吕布</roleNames>
+	<roleNames>赵云</roleNames>
+	
+	<playerIDs>玩家1</playerIDs>
+	<playerIDs>玩家2</playerIDs>
+</config>
