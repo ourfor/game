@@ -7,11 +7,11 @@ import java.io.*;
 import java.net.URL;
 
 public class XMLUtil {
-	// ¸Ã·½·¨ÓÃÓÚ´ÓXMLÅäÖÃÎÄ¼şÖĞÌáÈ¡ÈÃËùĞèµÄĞÅÏ¢£¬·µ»ØÒ»¸ö×Ö·û´®¶ÔÏó
+	// è¯¥æ–¹æ³•ç”¨äºä»XMLé…ç½®æ–‡ä»¶ä¸­æå–è®©æ‰€éœ€çš„ä¿¡æ¯ï¼Œè¿”å›ä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡
 	public String getByName(String nameStr) {
 		try {
 			String ret;
-			// ´´½¨DOMÎÄµµ¶ÔÏó
+			// åˆ›å»ºDOMæ–‡æ¡£å¯¹è±¡
 			DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = dFactory.newDocumentBuilder();
 			Document doc;
@@ -20,7 +20,7 @@ public class XMLUtil {
 			URL XMLFileURL = this.getClass().getResource(XMLFileStr);
 			doc = builder.parse(XMLFileURL.openConnection().getInputStream());
 
-			// »ñÈ¡°üº¬ÀàÃûµÄÎÄ±¾½áµã
+			// è·å–åŒ…å«ç±»åçš„æ–‡æœ¬ç»“ç‚¹
 			NodeList nl = doc.getElementsByTagName(nameStr);
 			Node classNode = nl.item(0).getFirstChild();
 			ret = classNode.getNodeValue();
@@ -32,11 +32,11 @@ public class XMLUtil {
 		}
 	}
 
-	// ¸Ã·½·¨ÓÃÓÚ´ÓXMLÅäÖÃÎÄ¼şÖĞÌáÈ¡ÈÃËùĞèµÄĞÅÏ¢£¬·µ»ØÒ»¸ö×Ö·û´®Êı×é¶ÔÏó
+	// è¯¥æ–¹æ³•ç”¨äºä»XMLé…ç½®æ–‡ä»¶ä¸­æå–è®©æ‰€éœ€çš„ä¿¡æ¯ï¼Œè¿”å›ä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„å¯¹è±¡
 	public String[] getByNames(String nameStr) {
 		try {
 			String[] ret;
-			// ´´½¨DOMÎÄµµ¶ÔÏó
+			// åˆ›å»ºDOMæ–‡æ¡£å¯¹è±¡
 			DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = dFactory.newDocumentBuilder();
 			Document doc;
@@ -45,7 +45,7 @@ public class XMLUtil {
 			URL XMLFileURL = this.getClass().getResource(XMLFileStr);
 			doc = builder.parse(XMLFileURL.openConnection().getInputStream());
 
-			// »ñÈ¡°üº¬ÀàÃûµÄÎÄ±¾½áµã
+			// è·å–åŒ…å«ç±»åçš„æ–‡æœ¬ç»“ç‚¹
 			NodeList nl = doc.getElementsByTagName(nameStr);
 			ret = new String[nl.getLength()];
 			for (int i = 0; i < nl.getLength(); i++) {
@@ -59,21 +59,21 @@ public class XMLUtil {
 		}
 	}
 
-	// ¸Ã·½·¨ÓÃÓÚ´ÓXMLÅäÖÃÎÄ¼şÖĞÌáÈ¡¾ßÌåÀàÀàÃû£¬²¢·µ»ØÒ»¸öÊµÀı¶ÔÏó
+	// è¯¥æ–¹æ³•ç”¨äºä»XMLé…ç½®æ–‡ä»¶ä¸­æå–å…·ä½“ç±»ç±»åï¼Œå¹¶è¿”å›ä¸€ä¸ªå®ä¾‹å¯¹è±¡
 	public Object getBean() {
 		try {
-			// ´´½¨DOMÎÄµµ¶ÔÏó
+			// åˆ›å»ºDOMæ–‡æ¡£å¯¹è±¡
 			DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = dFactory.newDocumentBuilder();
 			Document doc;
 			doc = builder.parse(new File("src//designpatterns//factorymethod//config.xml"));
 
-			// »ñÈ¡°üº¬ÀàÃûµÄÎÄ±¾½áµã
+			// è·å–åŒ…å«ç±»åçš„æ–‡æœ¬ç»“ç‚¹
 			NodeList nl = doc.getElementsByTagName("className");
 			Node classNode = nl.item(0).getFirstChild();
 			String cName = classNode.getNodeValue();
 
-			// Í¨¹ıÀàÃûÉú³ÉÊµÀı¶ÔÏó²¢½«Æä·µ»Ø
+			// é€šè¿‡ç±»åç”Ÿæˆå®ä¾‹å¯¹è±¡å¹¶å°†å…¶è¿”å›
 			Class c = Class.forName(cName);
 			Object obj = c.newInstance();
 			return obj;
