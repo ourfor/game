@@ -54,13 +54,13 @@ public class Bullets {
 
 		imgs.put("D", bulletImages[3]);
 
-		imgs.put("RU", bulletImages[4]);
+		imgs.put("RU", bulletImages[6]);
 
 		imgs.put("LU", bulletImages[5]);
 
-		imgs.put("RD", bulletImages[6]);
+		imgs.put("RD", bulletImages[7]);
 
-		imgs.put("LD", bulletImages[7]);
+		imgs.put("LD", bulletImages[4]);
 
 
 	}
@@ -159,7 +159,7 @@ public class Bullets {
 			break;
 
         case LD:
-			g.drawImage(imgs.get("D"), x, y, null);
+			g.drawImage(imgs.get("LD"), x, y, null);
 			break;
 
 		}
