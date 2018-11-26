@@ -23,16 +23,21 @@ public class Tank {
 	private static Random r = new Random();
 	private int step = r.nextInt(10) + 5; // 产生一个随机数,随机模拟坦克的移动路径
 
-	private boolean bL = false, bU = false, bR = false, bD = false;
+	private boolean bL = false, bU = false, bR = false, bD = false, bLU = false, bRU = false , bLD = false, bRD = false ;
 
 	private static Toolkit tk = Toolkit.getDefaultToolkit();// 控制面板
 	private static Image[] tankImags = null; // 存储全局静态
 	static {
-		tankImags = new Image[] { tk.getImage(BombTank.class.getResource("Images/tankD.gif")),
+		tankImags = new Image[] {
+				tk.getImage(BombTank.class.getResource("Images/tankD.gif")),
 				tk.getImage(BombTank.class.getResource("Images/tankU.gif")),
 				tk.getImage(BombTank.class.getResource("Images/tankL.gif")),
-				tk.getImage(BombTank.class.getResource("Images/tankR.gif")), };
-
+				tk.getImage(BombTank.class.getResource("Images/tankR.gif")),
+		  		tk.getImage(BombTank.class.getResource("Images/tankRU.gif")),
+				tk.getImage(BombTank.class.getResource("Images/tankLU.gif")),
+				tk.getImage(BombTank.class.getResource("Images/tankRD.gif")),
+				tk.getImage(BombTank.class.getResource("Images/tankLD.gif")),
+		};
 	}
 
 	public Tank(int x, int y, boolean good) {// Tank的构造函数1
@@ -73,9 +78,26 @@ public class Tank {
 			g.drawImage(tankImags[2], x, y, null);
 			break;
 
-		case R:
+        case R:
 			g.drawImage(tankImags[3], x, y, null);
 			break;
+
+		case RU:
+			g.drawImage(tankImags[4], x, y, null);
+			break;
+
+		case LU:
+			g.drawImage(tankImags[5], x, y, null);
+			break;
+
+        case RD:
+			g.drawImage(tankImags[6], x, y, null);
+			break;
+
+        case LD:
+			g.drawImage(tankImags[7], x, y, null);
+			break;
+
 
 		}
 
@@ -100,6 +122,23 @@ public class Tank {
 		case D:
 			y += speedY;
 			break;
+        case LU:
+            x -= 0.707*speedX;
+			y -= 0.707*speedY;
+			break;
+        case RU:
+			x += 0.707*speedX;
+            y -= 0.707*speedY;
+			break;
+        case LD:
+            x -= 0.707*speedX;
+			y += 0.707*speedY;
+			break;
+        case RD:
+			x += 0.707*speedX;
+            y += 0.707*speedY;
+			break;
+
 		case STOP:
 			break;
 		}
@@ -139,7 +178,7 @@ public class Tank {
 	public void keyPressed(KeyEvent e) { // 接受键盘事件
 		int key = e.getKeyCode();
 		switch (key) {
-		case KeyEvent.VK_R: // 当按下R时，重新开始游戏
+		case KeyEvent.VK_B: // 当按下B时，重新开始游戏
 			tc.tanks.clear(); // 清理
 			tc.bullets.clear();
 			tc.trees.clear();
@@ -164,39 +203,67 @@ public class Tank {
 				tc.home.setLive(true);
 			new GameFrame(); // 重新创建面板
 			break;
-		case KeyEvent.VK_RIGHT: // 监听向右键
+		case KeyEvent.VK_D: // 监听向右键
 			bR = true;
 			break;
 
-		case KeyEvent.VK_LEFT:// 监听向左键
+		case KeyEvent.VK_A:// 监听向左键
 			bL = true;
 			break;
 
-		case KeyEvent.VK_UP: // 监听向上键
+		case KeyEvent.VK_W: // 监听向上键
 			bU = true;
 			break;
 
-		case KeyEvent.VK_DOWN:// 监听向下键
+		case KeyEvent.VK_S:// 监听向下键
 			bD = true;
+			break;
+
+        case KeyEvent.VK_E: // 监听向右上键
+			bRU = true;
+			break;
+
+        case KeyEvent.VK_Z:// 监听向左下键
+			bLD = true;
+			break;
+
+        case KeyEvent.VK_Q: // 监听向左上键
+			bLU = true;
+			break;
+
+        case KeyEvent.VK_C:// 监听向右下键
+			bRD = true;
 			break;
 		}
 		decideDirection();// 调用函数确定移动方向
 	}
 
 	void decideDirection() {
-		if (!bL && !bU && bR && !bD) // 向右移动
+		if (!bL && !bU && bR && !bD && !bLD && !bLU && !bRU && !bRD) // 向右移动
 			direction = Direction.R;
 
-		else if (bL && !bU && !bR && !bD) // 向左移
+		else if (bL && !bU && !bR && !bD && !bLD && !bLU && !bRU && !bRD) // 向左移
 			direction = Direction.L;
 
-		else if (!bL && bU && !bR && !bD) // 向上移动
+		else if (!bL && bU && !bR && !bD && !bLD && !bLU && !bRU && !bRD) // 向上移动
 			direction = Direction.U;
 
-		else if (!bL && !bU && !bR && bD) // 向下移动
+		else if (!bL && !bU && !bR && bD && !bLD && !bLU && !bRU && !bRD) // 向下移动
 			direction = Direction.D;
 
-		else if (!bL && !bU && !bR && !bD)
+		else if (!bL && !bU && !bR && !bD && !bLD && bLU && !bRU && !bRD) // 向左上移动
+			direction = Direction.LU;
+
+		else if (!bL && !bU && !bR && !bD && !bLD && !bLU && bRU && !bRD) // 向右上移动
+			direction = Direction.RU;
+
+		else if (!bL && !bU && !bR && !bD && bLD && !bLU && !bRU && !bRD) // 向左下移动
+			direction = Direction.LD;
+
+		else if (!bL && !bU && !bR && !bD && !bLD && !bLU && !bRU && bRD) // 向右下移动
+			direction = Direction.RD;
+
+		else if (!bL && !bU && !bR && !bD && !bLD && !bLU && !bRU && !bRD)
 			direction = Direction.STOP; // 没有按键，就保持不动
 	}
 
@@ -204,24 +271,40 @@ public class Tank {
 		int key = e.getKeyCode();
 		switch (key) {
 
-		case KeyEvent.VK_F:
+		case KeyEvent.VK_J:
 			fire();
 			break;
 
-		case KeyEvent.VK_RIGHT:
+		case KeyEvent.VK_D:
 			bR = false;
 			break;
 
-		case KeyEvent.VK_LEFT:
+		case KeyEvent.VK_A:
 			bL = false;
 			break;
 
-		case KeyEvent.VK_UP:
+		case KeyEvent.VK_W:
 			bU = false;
 			break;
 
-		case KeyEvent.VK_DOWN:
+		case KeyEvent.VK_S:
 			bD = false;
+			break;
+
+        case KeyEvent.VK_E:
+			bRU = false;
+			break;
+
+        case KeyEvent.VK_Z:
+			bLD = false;
+			break;
+
+        case KeyEvent.VK_Q:
+			bLU = false;
+			break;
+
+        case KeyEvent.VK_C:
+			bRD = false;
 			break;
 
 		}

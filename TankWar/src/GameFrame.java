@@ -324,7 +324,7 @@ public class GameFrame extends Frame implements ActionListener {
 		this.setSize(Fram_width, Fram_length); // 设置界面大小
 		// this.setLocation(280, 50); // 设置界面出现的位置
 		setLocationRelativeTo(null);// 让窗体居中
-		this.setTitle("坦克大战——(重新开始：R键  开火：F键)                 ");
+		this.setTitle("坦克大战——(重新开始：B键  开火：J键)                 ");
 
 		this.addWindowListener(new WindowAdapter() { // 窗口关闭监听
 			public void windowClosing(WindowEvent e) {

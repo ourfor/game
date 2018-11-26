@@ -36,6 +36,14 @@ public class Bullets {
 
 				tk.getImage(Bullets.class.getClassLoader().getResource("images/bulletD.gif")),
 
+				tk.getImage(Bullets.class.getClassLoader().getResource("images/bulletLD.gif")),
+
+				tk.getImage(Bullets.class.getClassLoader().getResource("images/bulletLU.gif")),
+
+				tk.getImage(Bullets.class.getClassLoader().getResource("images/bulletRU.gif")),
+
+				tk.getImage(Bullets.class.getClassLoader().getResource("images/bulletRD.gif")),
+
 		};
 
 		imgs.put("L", bulletImages[0]); // 加入Map容器
@@ -45,6 +53,15 @@ public class Bullets {
 		imgs.put("R", bulletImages[2]);
 
 		imgs.put("D", bulletImages[3]);
+
+		imgs.put("RU", bulletImages[4]);
+
+		imgs.put("LU", bulletImages[5]);
+
+		imgs.put("RD", bulletImages[6]);
+
+		imgs.put("LD", bulletImages[7]);
+
 
 	}
 
@@ -80,8 +97,25 @@ public class Bullets {
 			y += speedY;
 			break;
 
-		case STOP: // 游戏暂停
+		case LU: // 子弹不断向左上进攻
+			x -= 0.707*speedX;
+			y -= 0.707*speedY;
 			break;
+		case RU: // 子弹不断向右上进攻
+			x += 0.707*speedX;
+			y -= 0.707*speedY;
+			break;
+		case LD: // 子弹不断向左下进攻
+			x -= 0.707*speedX;
+			y += 0.707*speedY;
+			break;
+		case RD: // 子弹不断向右下进攻
+			x += 0.707*speedX;
+			y += 0.707*speedY;
+			break;
+
+		case STOP: // 游戏暂停
+		break;
 		}
 
 		if (x < 0 || y < 0 || x > GameFrame.Fram_width || y > GameFrame.Fram_length) {
@@ -109,6 +143,22 @@ public class Bullets {
 			break;
 
 		case D:
+			g.drawImage(imgs.get("D"), x, y, null);
+			break;
+
+        case LU:
+			g.drawImage(imgs.get("LU"), x, y, null);
+			break;
+
+        case RU:
+			g.drawImage(imgs.get("RU"), x, y, null);
+			break;
+
+        case RD:
+			g.drawImage(imgs.get("RD"), x, y, null);
+			break;
+
+        case LD:
 			g.drawImage(imgs.get("D"), x, y, null);
 			break;
 
