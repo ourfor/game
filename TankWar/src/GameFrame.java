@@ -415,7 +415,7 @@ public class GameFrame extends Frame implements ActionListener {
 			}
 		} else if (e.getActionCommand().equals("help")) {
 			printable = false;
-			JOptionPane.showMessageDialog(null, "用→ ← ↑ ↓控制方向，F键盘发射，R重新开始！", "提示！", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "用W S A D控制方向上 下 左 右，用Q E Z C控制方向左上 右上 左下 右下 ,J键盘发射，B重新开始！", "提示！", JOptionPane.INFORMATION_MESSAGE);
 			this.setVisible(true);
 			printable = true;
 			new Thread(new PaintThread()).start(); // 线程启动
