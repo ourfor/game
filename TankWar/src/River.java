@@ -7,8 +7,8 @@ import java.awt.Toolkit;
  * 河流类
  */
 public class River {
-	public static final int riverWidth = 40;
-	public static final int riverLength = 100;// 静态全局变量
+	public static final int riverWidth = 55;
+	public static final int riverLength = 154;// 静态全局变量
 	private int x, y;
 	GameFrame tc;
 
