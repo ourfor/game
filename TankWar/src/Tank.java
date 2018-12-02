@@ -415,14 +415,26 @@ public class Tank {
 	}
 
 	public boolean eat(SuperBullets b,java.util.List<Tank> tanks) {
-		for (int i = 0; i < tanks.size(); i++) {
-			Tank t = tanks.get(i);
-				if (this.live && t.isLive() && this.getRect().intersects(t.getRect())) {
-					t.setLife(0);  // 吃一个炸弹，清除场上所有坦克
-					return true;
+
+		if (this.live && b.isLive() && this.getRect().intersects(b.getRect())) {
+			if (this.isLive())
+				for (int i = 0; i < tanks.size(); i++) {
+					Tank t = tanks.get(i);
+					BombTank e = new BombTank(t.getX(), t.getY(), tc);
+					tc.bombTanks.add(e);
+					if(!t.isGood()) {
+						t.setLife(0);
+						t.setLive(false);
+					}  // 吃一个炸弹，清除场上所有坦克
+
 				}
+			else
+				this.life = 200;
+			b.setLive(false);
+
+			return true;// 每吃一个，清除场上所有敌方坦克
 		}
-		return false;// 每吃一个，清除场上所有敌方坦克
+		return false;
 	}
 
 
