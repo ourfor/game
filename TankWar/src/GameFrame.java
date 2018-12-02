@@ -23,6 +23,7 @@ public class GameFrame extends Frame implements ActionListener {
 
 	Tank homeTank = new Tank(300, 560, true, Direction.STOP, this);// 实例化坦克
 	Blood blood = new Blood(); // 实例化血包
+	SuperBullets boom =new SuperBullets();//实例化炸弹
 	Home home = new Home(373, 545, this);// 实例化home
 
 	// 以下集合变量在构造方法中进行了初始化
@@ -101,6 +102,7 @@ public class GameFrame extends Frame implements ActionListener {
 		home.draw(g); // 画出home
 		homeTank.draw(g); // 画出自己家的坦克
 		homeTank.eat(blood);// 加血--生命值
+		homeTank.eat(boom,tanks);//炸弹--清除场上所有坦克
 
 		for (int i = 0; i < bullets.size(); i++) { // 对每一个子弹
 			Bullets m = bullets.get(i);
@@ -158,6 +160,7 @@ public class GameFrame extends Frame implements ActionListener {
 		}
 
 		blood.draw(g);// 画出加血包
+		boom.draw(g); // 画出炸弹
 
 		for (int i = 0; i < trees.size(); i++) { // 画出trees
 			Tree tr = trees.get(i);
