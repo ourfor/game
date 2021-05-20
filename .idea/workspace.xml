@@ -1,85 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="96353368-fc5f-4d61-a875-91ad0075e27e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game_java/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game_java/Print.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/.settings/org.eclipse.ltk.core.refactoring.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/TankWar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Blood.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/BombTank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/BrickWall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Bullets$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Bullets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/GameFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/GameFrame$KeyMonitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/GameFrame$PaintThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/GameFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Home.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/boom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletL.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletLD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletLU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletR.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletRD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletRU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/bulletU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/commonWall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/hp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/metalWall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/river.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/screen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankL.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankLD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankLU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankR.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankRD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankRU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tankU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Images/tree.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/MetalWall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/River.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/SuperBullets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Tank$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Tank$DrawBloodbBar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Tank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/out/production/TankWar/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Blood.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/BombTank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/BrickWall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Bullets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/GameFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Home.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/boom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletL.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletLD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletLU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletR.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletRD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletRU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/bulletU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/commonWall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/hp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/metalWall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/river.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/screen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankL.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankLD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankLU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankR.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankRD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankRU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tankU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Images/tree.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/MetalWall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/River.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/SuperBullets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Tank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TankWar/src/Tree.java" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1760547928">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="12" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="5" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="13" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="6815" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="6815" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-              <folding>
-                <element signature="method#StartingGame#0;class#Game#0" />
-                <element signature="method#ArgsIslegal#0;class#Game#0" />
-                <element signature="method#UpdateMap#0;class#Print#0" />
-                <element signature="method#PrintMap#0;class#Print#0" />
-                <element signature="method#HelpinMap#0;class#Print#0" />
-                <element signature="method#A_Move#0;class#Print#0" />
-                <element signature="method#B_Move#0;class#Print#0" />
-                <element signature="method#SpecialLocation#0;class#Print#0" />
-                <element signature="method#Lucky#0;class#Print#0" />
-                <element signature="e#9736#9737#0" expanded="true" />
-                <element signature="e#9790#9791#0" expanded="true" />
-                <element signature="method#Boom#0;class#Print#0" />
-                <element signature="method#TimeTube#0;class#Print#0" />
-                <element signature="method#GameOver#0;class#Print#0" />
-                <element signature="e#10300#10301#0" expanded="true" />
-                <element signature="e#10360#10361#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,6 +144,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -105,11 +167,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="992" />
   </component>
+  <component name="ProjectId" id="1smhK8uTyhLMFowTsSBUeLWYxXm" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -138,53 +204,65 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537778123922" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Game">
-    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Game" />
-      <module name="Game_java" />
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Map" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Map" />
-      <module name="Game_java" />
+    <configuration name="TankwarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tankwar" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.ourfor.game.tankwar.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Map" />
-      <item itemvalue="Application.Game" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Game" />
-        <item itemvalue="Application.Map" />
-      </list>
-    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -208,6 +286,14 @@
       <workItem from="1537668454151" duration="2005000" />
       <workItem from="1537773522368" duration="78000" />
       <workItem from="1537773662355" duration="4447000" />
+      <workItem from="1621483622303" duration="64000" />
+      <workItem from="1621483716658" duration="37000" />
+      <workItem from="1621483755330" duration="1000" />
+      <workItem from="1621483760347" duration="10000" />
+      <workItem from="1621483935325" duration="4000" />
+      <workItem from="1621483941617" duration="20000" />
+      <workItem from="1621483965163" duration="7000" />
+      <workItem from="1621483996283" duration="8632000" />
     </task>
     <servers />
   </component>
@@ -249,10 +335,42 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.4.5/spring-boot-2.4.5.jar!/org/springframework/boot/ImageBanner.class</url>
+          <line>252</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.4.5/spring-boot-2.4.5.jar!/org/springframework/boot/ImageBanner.class</url>
+          <line>251</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.4.5/spring-boot-2.4.5.jar!/org/springframework/boot/ImageBanner.class</url>
+          <line>253</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Game.java">

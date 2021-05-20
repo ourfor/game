@@ -1,0 +1,230 @@
+2021-05-20 14:44:09.707  INFO 12491 --- [main] top.ourfor.game.tankwar.Application      : Starting Application using Java 15.0.2 on liangtiandeMacBook-Pro.local with PID 12491 (/Users/ourfor/Code/project/game/target/classes started by ourfor in /Users/ourfor/Code/project/game)
+2021-05-20 14:44:09.709  INFO 12491 --- [main] top.ourfor.game.tankwar.Application      : No active profile set, falling back to default profiles: default
+2021-05-20 14:44:10.449  WARN 12491 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'application': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameFrame' defined in file [/Users/ourfor/Code/project/game/target/classes/top/ourfor/game/tankwar/ui/GameFrame.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+2021-05-20 14:44:10.460  INFO 12491 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-20 14:44:10.482 ERROR 12491 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'application': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameFrame' defined in file [/Users/ourfor/Code/project/game/target/classes/top/ourfor/game/tankwar/ui/GameFrame.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.6.jar:5.3.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
+	at top.ourfor.game.tankwar.Application.main(Application.java:28) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameFrame' defined in file [/Users/ourfor/Code/project/game/target/classes/top/ourfor/game/tankwar/ui/GameFrame.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1316) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.6.jar:5.3.6]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:225) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-5.3.6.jar:5.3.6]
+	... 30 common frames omitted
+Caused by: java.awt.HeadlessException: null
+	at java.desktop/java.awt.GraphicsEnvironment.checkHeadless(GraphicsEnvironment.java:165) ~[na:na]
+	at java.desktop/java.awt.Window.<init>(Window.java:545) ~[na:na]
+	at java.desktop/java.awt.Frame.<init>(Frame.java:423) ~[na:na]
+	at java.desktop/java.awt.Frame.<init>(Frame.java:388) ~[na:na]
+	at top.ourfor.game.tankwar.ui.GameFrame.<init>(GameFrame.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:212) ~[spring-beans-5.3.6.jar:5.3.6]
+	... 32 common frames omitted
+
+2021-05-20 14:44:28.499  INFO 12504 --- [main] o.s.boot.SpringApplication               : [39m[49m
+
+  [97m                                                                            
+                                                                              
+                                                            [30m@[97m                 
+                  [37m.[97m                     .  [37m:[30m@@@[90m8##[30m@@@@@@@@@@@[97m    .  .         
+                .                    ..  [37m:[30m@[90m&&&&[92m*[30m@[90m#[30m@@@@@@@[97m     .[37m:[97m              
+          .                         [30m@[97m  [90m#[32mo[30m@[90m8&[93m.[90m8&&&[30m@@[34m@[91m#[96m*[30m@[90m&[30m@[97m  . [30m@[97m [30m@[37m:[97m             
+                                    [30m@[97m  [90m#[30m@[32m:[92m.[90m&[93m.[90m8&&[30m@@@@[91m#[96m*[30m@[90m#[30m@@@@@[37m*[97m                
+                                          [32mo[30m@@@@@[90m8#[30m@@[34m@[30m@@@@@[97m.      [90m#[30m@[90m#[97m          
+                                             [90m&88##[30m@@[34m@[30m@@[90m#[30m@[97m                     
+                                             [37mo[30m@@@@@@@@@@[36m*[91m&[30m@[97m                   
+                                          [32mooo[90m&&888##[30m@@@[34m@[30m@@@@[97m                  
+                                        [32m::[30m@[90m8888##88#[30m@@[34m@@@[30m@[35m@[30m@[97m                  
+                                   [30m@[90m8@8[37m*[32m:[30m@[90m8#####[35m#[30m@[90m##[30m@@@[34m@@[30m@@@[97m ..[37m*o[97m. [37m.[97m          
+             .  . [90m#[30m@[32mo[90m&[30m@[90m#[35m@[30m@@@[96m..[30m@@@@[34m@[30m@[90m8[91m&[90m#[30m@[37m*[30m@[90m#####[91m88[30m@[90m8#[36mo[30m@@[34m@@[30m@[36m&[30m@[37m:[36m&[33m&&[37m*[34m@[30m@@[31m#[90m#[97m        
+           [37m.*:[90m8#[30m@@@@[90m##[30m@[91m#[90m@[31m#[91m8[30m@[96m..[30m@@@[90m#[30m@@[36mo[33m8[90m8&[32m::o[30m@[90m@#[30m@[90m#[30m@[90m#8##[30m@[90m8[36mo[31m@@[93m*[37m*[90m#[37m*[90m#[34m@@@[30m@@[31m@[90m#[97m        
+                    [32mo&[90m8#[35m@[30m@@@[96m..[30m@@@[34m@@[90m88[30m@[90m88[33m8[93m*******.............[33m8[93m.[90m&[30m@[34m@[30m@@[37m*[90m#[97m        
+                                   [90m8#[30m@[90m##[30m@[90m8###@@[30m@@@@@@@@@@@@@@@[90m8#[30m@[34m@[30m@[97m           
+                             [32m:oo[90m&&#88#####@@[30m@@@@@@@@@@@@@@@@@@@@@@@[34m@@[97m         
+                            [32m:o[30m@@@@@@@@@@@@@@@@@@@[90m@@[30m@@@@@@@@[90m@[30m@@@@@@@[90m@@[34m@[97m        
+                            [90m&[30m@@@@@@@@[90m#[30m@@[90m@[30m@@@@[90m@[30m@@@@@@@@[90m@[30m@@@@@@@@@@@[90m#[30m@@[90m@[34m@@[97m      
+                            [30m@@[90m#[30m@@@@[90m#[30m@[90m#[30m@@@@@@@@@@@[90m#[30m@[90m@[30m@@@[90m#[30m@@@[90m#[30m@[90m#[30m@@[90m#[30m@[90m#[30m@@@[90m#[97m       
+                  .         [30m@@@[90m#[30m@@[37m**[30m@@@[90m#[30m@@@@@@@[90m##[37m**[30m@[90m@[30m@@@@@@@[90m#[30m@@[37m**[30m@@@@@@[97m       
+                .           [90m#[30m@@@@@[90m##[30m@[90m#[30m@@@@@@@@@@@@@@@@@@@@@@@[90m#[30m@[90m##[30m@@@@@[97m        
+           [37m.[97m                 [30m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@[90m#[30m@@@@[90m#[30m@@[97m         
+                               [30m@@@@@@@@@@@@@@@@[90m#[30m@@@@[37m:.[97m..    [37mo[30m@@@@@@[97m           
+                                                                              
+                                                                              
+                                                                              
+[39m[49m
+
+2021-05-20 14:44:28.535  INFO 12504 --- [main] top.ourfor.game.tankwar.Application      : Starting Application using Java 15.0.2 on liangtiandeMacBook-Pro.local with PID 12504 (/Users/ourfor/Code/project/game/target/classes started by ourfor in /Users/ourfor/Code/project/game)
+2021-05-20 14:44:28.536  INFO 12504 --- [main] top.ourfor.game.tankwar.Application      : No active profile set, falling back to default profiles: default
+2021-05-20 14:44:29.211  WARN 12504 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'application': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameFrame' defined in file [/Users/ourfor/Code/project/game/target/classes/top/ourfor/game/tankwar/ui/GameFrame.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+2021-05-20 14:44:29.222  INFO 12504 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-20 14:44:29.240 ERROR 12504 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'application': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameFrame' defined in file [/Users/ourfor/Code/project/game/target/classes/top/ourfor/game/tankwar/ui/GameFrame.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.6.jar:5.3.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
+	at top.ourfor.game.tankwar.Application.main(Application.java:28) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameFrame' defined in file [/Users/ourfor/Code/project/game/target/classes/top/ourfor/game/tankwar/ui/GameFrame.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1316) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.6.jar:5.3.6]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [top.ourfor.game.tankwar.ui.GameFrame]: Constructor threw exception; nested exception is java.awt.HeadlessException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:225) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-5.3.6.jar:5.3.6]
+	... 30 common frames omitted
+Caused by: java.awt.HeadlessException: null
+	at java.desktop/java.awt.GraphicsEnvironment.checkHeadless(GraphicsEnvironment.java:165) ~[na:na]
+	at java.desktop/java.awt.Window.<init>(Window.java:545) ~[na:na]
+	at java.desktop/java.awt.Frame.<init>(Frame.java:423) ~[na:na]
+	at java.desktop/java.awt.Frame.<init>(Frame.java:388) ~[na:na]
+	at top.ourfor.game.tankwar.ui.GameFrame.<init>(GameFrame.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:212) ~[spring-beans-5.3.6.jar:5.3.6]
+	... 32 common frames omitted
+
+2021-05-20 14:45:26.428  INFO 12549 --- [main] o.s.boot.SpringApplication               : 
+  [97m
+
+                                                            [30m@[97m
+                  [37m.[97m                     .  [37m:[30m@@@[90m8##[30m@@@@@@@@@@@[97m    .  .
+                .                    ..  [37m:[30m@[90m&&&&[92m*[30m@[90m#[30m@@@@@@@[97m     .[37m:[97m
+          .                         [30m@[97m  [90m#[32mo[30m@[90m8&[93m.[90m8&&&[30m@@[34m@[91m#[96m*[30m@[90m&[30m@[97m  . [30m@[97m [30m@[37m:[97m
+                                    [30m@[97m  [90m#[30m@[32m:[92m.[90m&[93m.[90m8&&[30m@@@@[91m#[96m*[30m@[90m#[30m@@@@@[37m*[97m
+                                          [32mo[30m@@@@@[90m8#[30m@@[34m@[30m@@@@@[97m.      [90m#[30m@[90m#[97m
+                                             [90m&88##[30m@@[34m@[30m@@[90m#[30m@[97m
+                                             [37mo[30m@@@@@@@@@@[36m*[91m&[30m@[97m
+                                          [32mooo[90m&&888##[30m@@@[34m@[30m@@@@[97m
+                                        [32m::[30m@[90m8888##88#[30m@@[34m@@@[30m@[35m@[30m@[97m
+                                   [30m@[90m8@8[37m*[32m:[30m@[90m8#####[35m#[30m@[90m##[30m@@@[34m@@[30m@@@[97m ..[37m*o[97m. [37m.[97m
+             .  . [90m#[30m@[32mo[90m&[30m@[90m#[35m@[30m@@@[96m..[30m@@@@[34m@[30m@[90m8[91m&[90m#[30m@[37m*[30m@[90m#####[91m88[30m@[90m8#[36mo[30m@@[34m@@[30m@[36m&[30m@[37m:[36m&[33m&&[37m*[34m@[30m@@[31m#[90m#[97m
+           [37m.*:[90m8#[30m@@@@[90m##[30m@[91m#[90m@[31m#[91m8[30m@[96m..[30m@@@[90m#[30m@@[36mo[33m8[90m8&[32m::o[30m@[90m@#[30m@[90m#[30m@[90m#8##[30m@[90m8[36mo[31m@@[93m*[37m*[90m#[37m*[90m#[34m@@@[30m@@[31m@[90m#[97m
+                    [32mo&[90m8#[35m@[30m@@@[96m..[30m@@@[34m@@[90m88[30m@[90m88[33m8[93m*******.............[33m8[93m.[90m&[30m@[34m@[30m@@[37m*[90m#[97m
+                                   [90m8#[30m@[90m##[30m@[90m8###@@[30m@@@@@@@@@@@@@@@[90m8#[30m@[34m@[30m@[97m
+                             [32m:oo[90m&&#88#####@@[30m@@@@@@@@@@@@@@@@@@@@@@@[34m@@[97m
+                            [32m:o[30m@@@@@@@@@@@@@@@@@@@[90m@@[30m@@@@@@@@[90m@[30m@@@@@@@[90m@@[34m@[97m
+                            [90m&[30m@@@@@@@@[90m#[30m@@[90m@[30m@@@@[90m@[30m@@@@@@@@[90m@[30m@@@@@@@@@@@[90m#[30m@@[90m@[34m@@[97m
+                            [30m@@[90m#[30m@@@@[90m#[30m@[90m#[30m@@@@@@@@@@@[90m#[30m@[90m@[30m@@@[90m#[30m@@@[90m#[30m@[90m#[30m@@[90m#[30m@[90m#[30m@@@[90m#[97m
+                  .         [30m@@@[90m#[30m@@[37m**[30m@@@[90m#[30m@@@@@@@[90m##[37m**[30m@[90m@[30m@@@@@@@[90m#[30m@@[37m**[30m@@@@@@[97m
+                .           [90m#[30m@@@@@[90m##[30m@[90m#[30m@@@@@@@@@@@@@@@@@@@@@@@[90m#[30m@[90m##[30m@@@@@[97m
+           [37m.[97m                 [30m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@[90m#[30m@@@@[90m#[30m@@[97m
+                               [30m@@@@@@@@@@@@@@@@[90m#[30m@@@@[37m:.[97m..    [37mo[30m@@@@@@[97m
+
+
+
+[39m[49m
+
+
+
+2021-05-20 14:45:26.458  INFO 12549 --- [main] top.ourfor.game.tankwar.Application      : Starting Application using Java 15.0.2 on liangtiandeMacBook-Pro.local with PID 12549 (/Users/ourfor/Code/project/game/target/classes started by ourfor in /Users/ourfor/Code/project/game)
+2021-05-20 14:45:26.459  INFO 12549 --- [main] top.ourfor.game.tankwar.Application      : No active profile set, falling back to default profiles: default
+2021-05-20 14:45:27.231  INFO 12549 --- [main] top.ourfor.game.tankwar.Application      : 程序启动中
+2021-05-20 14:45:27.577  INFO 12549 --- [main] top.ourfor.game.tankwar.Application      : Started Application in 1.676 seconds (JVM running for 2.567)
+2021-05-20 14:46:41.846  INFO 12594 --- [main] o.s.boot.SpringApplication               : 
+  [97m
+
+                                                            [30m@[97m
+                  [37m.[97m                     .  [37m:[30m@@@[90m8##[30m@@@@@@@@@@@[97m    .  .
+                .                    ..  [37m:[30m@[90m&&&&[92m*[30m@[90m#[30m@@@@@@@[97m     .[37m:[97m
+          .                         [30m@[97m  [90m#[32mo[30m@[90m8&[93m.[90m8&&&[30m@@[34m@[91m#[96m*[30m@[90m&[30m@[97m  . [30m@[97m [30m@[37m:[97m
+                                    [30m@[97m  [90m#[30m@[32m:[92m.[90m&[93m.[90m8&&[30m@@@@[91m#[96m*[30m@[90m#[30m@@@@@[37m*[97m
+                                          [32mo[30m@@@@@[90m8#[30m@@[34m@[30m@@@@@[97m.      [90m#[30m@[90m#[97m
+                                             [90m&88##[30m@@[34m@[30m@@[90m#[30m@[97m
+                                             [37mo[30m@@@@@@@@@@[36m*[91m&[30m@[97m
+                                          [32mooo[90m&&888##[30m@@@[34m@[30m@@@@[97m
+                                        [32m::[30m@[90m8888##88#[30m@@[34m@@@[30m@[35m@[30m@[97m
+                                   [30m@[90m8@8[37m*[32m:[30m@[90m8#####[35m#[30m@[90m##[30m@@@[34m@@[30m@@@[97m ..[37m*o[97m. [37m.[97m
+             .  . [90m#[30m@[32mo[90m&[30m@[90m#[35m@[30m@@@[96m..[30m@@@@[34m@[30m@[90m8[91m&[90m#[30m@[37m*[30m@[90m#####[91m88[30m@[90m8#[36mo[30m@@[34m@@[30m@[36m&[30m@[37m:[36m&[33m&&[37m*[34m@[30m@@[31m#[90m#[97m
+           [37m.*:[90m8#[30m@@@@[90m##[30m@[91m#[90m@[31m#[91m8[30m@[96m..[30m@@@[90m#[30m@@[36mo[33m8[90m8&[32m::o[30m@[90m@#[30m@[90m#[30m@[90m#8##[30m@[90m8[36mo[31m@@[93m*[37m*[90m#[37m*[90m#[34m@@@[30m@@[31m@[90m#[97m
+                    [32mo&[90m8#[35m@[30m@@@[96m..[30m@@@[34m@@[90m88[30m@[90m88[33m8[93m*******.............[33m8[93m.[90m&[30m@[34m@[30m@@[37m*[90m#[97m
+                                   [90m8#[30m@[90m##[30m@[90m8###@@[30m@@@@@@@@@@@@@@@[90m8#[30m@[34m@[30m@[97m
+                             [32m:oo[90m&&#88#####@@[30m@@@@@@@@@@@@@@@@@@@@@@@[34m@@[97m
+                            [32m:o[30m@@@@@@@@@@@@@@@@@@@[90m@@[30m@@@@@@@@[90m@[30m@@@@@@@[90m@@[34m@[97m
+                            [90m&[30m@@@@@@@@[90m#[30m@@[90m@[30m@@@@[90m@[30m@@@@@@@@[90m@[30m@@@@@@@@@@@[90m#[30m@@[90m@[34m@@[97m
+                            [30m@@[90m#[30m@@@@[90m#[30m@[90m#[30m@@@@@@@@@@@[90m#[30m@[90m@[30m@@@[90m#[30m@@@[90m#[30m@[90m#[30m@@[90m#[30m@[90m#[30m@@@[90m#[97m
+                  .         [30m@@@[90m#[30m@@[37m**[30m@@@[90m#[30m@@@@@@@[90m##[37m**[30m@[90m@[30m@@@@@@@[90m#[30m@@[37m**[30m@@@@@@[97m
+                .           [90m#[30m@@@@@[90m##[30m@[90m#[30m@@@@@@@@@@@@@@@@@@@@@@@[90m#[30m@[90m##[30m@@@@@[97m
+           [37m.[97m                 [30m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@[90m#[30m@@@@[90m#[30m@@[97m
+                               [30m@@@@@@@@@@@@@@@@[90m#[30m@@@@[37m:.[97m..    [37mo[30m@@@@@@[97m
+
+
+
+[39m[49m
+
+
+
+2021-05-20 14:46:41.890  INFO 12594 --- [main] top.ourfor.game.tankwar.Application      : Starting Application using Java 15.0.2 on liangtiandeMacBook-Pro.local with PID 12594 (/Users/ourfor/Code/project/game/target/classes started by ourfor in /Users/ourfor/Code/project/game)
+2021-05-20 14:46:41.892  INFO 12594 --- [main] top.ourfor.game.tankwar.Application      : No active profile set, falling back to default profiles: default
+2021-05-20 14:46:42.837  INFO 12594 --- [main] top.ourfor.game.tankwar.Application      : 程序启动中
+2021-05-20 14:46:43.312  INFO 12594 --- [main] top.ourfor.game.tankwar.Application      : Started Application in 2.103 seconds (JVM running for 2.868)
